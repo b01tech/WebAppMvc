@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebAppMvc.Data;
+using WebAppMvc.Services;
 internal class Program
 {
     private static void Main(string[] args)
@@ -11,6 +12,7 @@ internal class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
         builder.Services.AddScoped<SeedingService>();
+        builder.Services.AddScoped<SellerService>();
 
         var app = builder.Build();
 
